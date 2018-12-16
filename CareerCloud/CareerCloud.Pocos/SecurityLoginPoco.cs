@@ -12,6 +12,7 @@ namespace CareerCloud.Pocos
     public class SecurityLoginPoco : IPoco
     {
         [Key]
+        [Required]
         [Column("Id")]
         public Guid Id { get; set; } 
         [Column("Login")]
@@ -39,6 +40,10 @@ namespace CareerCloud.Pocos
         [Column("Prefferred_Language")]
         public String PrefferredLanguage { get; set; } 
         [Column("Time_Stamp")]
-        public Byte[] TimeStamp { get; private set; } 
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public Byte[] TimeStamp { get; set; }
+        public virtual ICollection<ApplicantProfilePoco> ApplicantProfilePoco { get; set; }
+        public virtual ICollection<SecurityLoginsLogPoco> SecurityLoginsLogPoco { get; set; }
+        public virtual ICollection<SecurityLoginsRolePoco> SecurityLoginsRolePoco { get; set; }
     }
 }

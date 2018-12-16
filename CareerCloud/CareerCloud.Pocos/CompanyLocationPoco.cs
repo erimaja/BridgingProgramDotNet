@@ -13,20 +13,62 @@ namespace CareerCloud.Pocos
     {
         [Key]
         [Column("Id")]
-        public Guid Id { get; set; } 
+        public Guid Id { get; set; }
+
         [Column("Company")]
-        public Guid Company { get; set; } 
+        public Guid Company { get; set; }
+
+        [ForeignKey("Company")]
+        public virtual CompanyProfilePoco CompanyProfilePoco { get; set; }
+
         [Column("Country_Code")]
-        public string CountryCode { get; set; } 
+        [StringLength(10)]
+        [Required]
+        public string CountryCode { get; set; }
+
+        string _province;
         [Column("State_Province_Code")]
-        public string Province { get; set; } 
+        [StringLength(10)]
+        public string Province
+        {
+            get
+            {
+                return _province?.PadRight(10);
+            }
+
+            set
+            {
+                _province = value;
+            }
+        }
+       
+
         [Column("Street_Address")]
-        public string Street { get; set; } 
+        public string Street { get; set; }
+
         [Column("City_Town")]
-        public string City { get; set; } 
+        public string City { get; set; }
+
+        string _zipCode;
         [Column("Zip_Postal_Code")]
-        public string PostalCode { get; set; } 
-        [Column("Time_Stamp")]
-        public Byte[] TimeStamp { get; private set; } 
+        [StringLength(20)]
+        public string PostalCode
+        {
+            get
+            {
+                return _zipCode?.PadRight(20);
+            }
+
+            set
+            {
+                _zipCode = value;
+            }
+        }
+
+        [Column(name: "Time_Stamp",TypeName ="timestamp")]
+        [MaxLength(8)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public Byte[] TimeStamp { get; set; }
+        
     }
 }

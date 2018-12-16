@@ -12,17 +12,28 @@ namespace CareerCloud.Pocos
     public class CompanyJobSkillPoco : IPoco
     {
         [Key]
+        [Required]
         [Column("Id")]
         public Guid Id { get; set; } 
+
         [Column("Job")]
-        public Guid Job { get; set; } 
+        public Guid Job { get; set; }
+
+        [ForeignKey("Job")]
+        public virtual CompanyJobPoco CompanyJobPoco { get; set; }
+
         [Column("Skill")]
         public String Skill { get; set; } 
+
         [Column("Skill_Level")]
         public String SkillLevel { get; set; } 
+
         [Column("Importance")]
         public Int32 Importance { get; set; } 
+
         [Column("Time_Stamp")]
-        public Byte[] TimeStamp { get; private set; } 
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public Byte[] TimeStamp { get; set; }
+        
     }
 }

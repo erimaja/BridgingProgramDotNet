@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CareerCloud.Pocos</RootNamespace>
     <AssemblyName>CareerCloud.Pocos</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="ApplicantEducationPoco.cs" />
     <Compile Include="ApplicantJobApplicationPoco.cs" />
-    <Compile Include="ApplicantProfilPoco.cs" />
+    <Compile Include="ApplicantProfilePoco.cs" />
     <Compile Include="ApplicantResumePoco.cs" />
     <Compile Include="ApplicantSkillPoco.cs" />
     <Compile Include="ApplicantWorkHistoryPoco.cs" />
@@ -64,6 +64,9 @@
     <Compile Include="SecurityRolePoco.cs" />
     <Compile Include="SystemCountryCodePoco.cs" />
     <Compile Include="SystemLanguageCodePoco.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Security" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/CareerCloud.Pocos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISecurity_AddSecurityLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSecurityLogin" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_AddSecurityLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSecurityLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetAllSecurityLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSecurityLogin" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetAllSecurityLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSecurityLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetSingleSecurityLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleSecurityLogin" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetSingleSecurityLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleSecurityLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_RemoveSecurityLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSecurityLogin" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_RemoveSecurityLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSecurityLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_UpdateSecurityLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSecurityLogin" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_UpdateSecurityLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSecurityLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_AddSecurityLoginsLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSecurityLoginsLog" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_AddSecurityLoginsLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSecurityLoginsLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetAllSecurityLoginsLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSecurityLoginsLog" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetAllSecurityLoginsLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSecurityLoginsLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetSingleSecurityLoginsLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleSecurityLoginsLog" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetSingleSecurityLoginsLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleSecurityLoginsLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_RemoveSecurityLoginsLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSecurityLoginsLog" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_RemoveSecurityLoginsLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSecurityLoginsLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_UpdateSecurityLoginsLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSecurityLoginsLog" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_UpdateSecurityLoginsLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSecurityLoginsLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_AddSecurityLoginsRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSecurityLoginsRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_AddSecurityLoginsRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSecurityLoginsRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetAllSecurityLoginsRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSecurityLoginsRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetAllSecurityLoginsRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSecurityLoginsRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetSingleSecurityLoginsRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleSecurityLoginsRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetSingleSecurityLoginsRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleSecurityLoginsRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_RemoveSecurityLoginsRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSecurityLoginsRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_RemoveSecurityLoginsRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSecurityLoginsRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_UpdateSecurityLoginsRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSecurityLoginsRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_UpdateSecurityLoginsRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSecurityLoginsRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_AddSecurityRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSecurityRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_AddSecurityRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSecurityRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetAllSecurityRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSecurityRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetAllSecurityRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSecurityRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetSingleSecurityRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleSecurityRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_GetSingleSecurityRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleSecurityRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_RemoveSecurityRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSecurityRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_RemoveSecurityRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSecurityRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_UpdateSecurityRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSecurityRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurity_UpdateSecurityRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSecurityRoleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISecurity">
+    <wsdl:operation name="AddSecurityLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/AddSecurityLogin" message="tns:ISecurity_AddSecurityLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/AddSecurityLoginResponse" message="tns:ISecurity_AddSecurityLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSecurityLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetAllSecurityLogin" message="tns:ISecurity_GetAllSecurityLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetAllSecurityLoginResponse" message="tns:ISecurity_GetAllSecurityLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSecurityLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetSingleSecurityLogin" message="tns:ISecurity_GetSingleSecurityLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetSingleSecurityLoginResponse" message="tns:ISecurity_GetSingleSecurityLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSecurityLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/RemoveSecurityLogin" message="tns:ISecurity_RemoveSecurityLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/RemoveSecurityLoginResponse" message="tns:ISecurity_RemoveSecurityLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecurityLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/UpdateSecurityLogin" message="tns:ISecurity_UpdateSecurityLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/UpdateSecurityLoginResponse" message="tns:ISecurity_UpdateSecurityLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSecurityLoginsLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/AddSecurityLoginsLog" message="tns:ISecurity_AddSecurityLoginsLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/AddSecurityLoginsLogResponse" message="tns:ISecurity_AddSecurityLoginsLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSecurityLoginsLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetAllSecurityLoginsLog" message="tns:ISecurity_GetAllSecurityLoginsLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetAllSecurityLoginsLogResponse" message="tns:ISecurity_GetAllSecurityLoginsLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSecurityLoginsLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetSingleSecurityLoginsLog" message="tns:ISecurity_GetSingleSecurityLoginsLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetSingleSecurityLoginsLogResponse" message="tns:ISecurity_GetSingleSecurityLoginsLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSecurityLoginsLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/RemoveSecurityLoginsLog" message="tns:ISecurity_RemoveSecurityLoginsLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/RemoveSecurityLoginsLogResponse" message="tns:ISecurity_RemoveSecurityLoginsLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecurityLoginsLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/UpdateSecurityLoginsLog" message="tns:ISecurity_UpdateSecurityLoginsLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/UpdateSecurityLoginsLogResponse" message="tns:ISecurity_UpdateSecurityLoginsLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSecurityLoginsRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/AddSecurityLoginsRole" message="tns:ISecurity_AddSecurityLoginsRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/AddSecurityLoginsRoleResponse" message="tns:ISecurity_AddSecurityLoginsRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSecurityLoginsRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetAllSecurityLoginsRole" message="tns:ISecurity_GetAllSecurityLoginsRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetAllSecurityLoginsRoleResponse" message="tns:ISecurity_GetAllSecurityLoginsRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSecurityLoginsRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetSingleSecurityLoginsRole" message="tns:ISecurity_GetSingleSecurityLoginsRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetSingleSecurityLoginsRoleResponse" message="tns:ISecurity_GetSingleSecurityLoginsRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSecurityLoginsRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/RemoveSecurityLoginsRole" message="tns:ISecurity_RemoveSecurityLoginsRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/RemoveSecurityLoginsRoleResponse" message="tns:ISecurity_RemoveSecurityLoginsRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecurityLoginsRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/UpdateSecurityLoginsRole" message="tns:ISecurity_UpdateSecurityLoginsRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/UpdateSecurityLoginsRoleResponse" message="tns:ISecurity_UpdateSecurityLoginsRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSecurityRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/AddSecurityRole" message="tns:ISecurity_AddSecurityRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/AddSecurityRoleResponse" message="tns:ISecurity_AddSecurityRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSecurityRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetAllSecurityRole" message="tns:ISecurity_GetAllSecurityRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetAllSecurityRoleResponse" message="tns:ISecurity_GetAllSecurityRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSecurityRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/GetSingleSecurityRole" message="tns:ISecurity_GetSingleSecurityRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/GetSingleSecurityRoleResponse" message="tns:ISecurity_GetSingleSecurityRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSecurityRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/RemoveSecurityRole" message="tns:ISecurity_RemoveSecurityRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/RemoveSecurityRoleResponse" message="tns:ISecurity_RemoveSecurityRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecurityRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurity/UpdateSecurityRole" message="tns:ISecurity_UpdateSecurityRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurity/UpdateSecurityRoleResponse" message="tns:ISecurity_UpdateSecurityRole_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISecurity" type="tns:ISecurity">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddSecurityLogin">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/AddSecurityLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSecurityLogin">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetAllSecurityLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSecurityLogin">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetSingleSecurityLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSecurityLogin">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/RemoveSecurityLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecurityLogin">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/UpdateSecurityLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSecurityLoginsLog">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/AddSecurityLoginsLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSecurityLoginsLog">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetAllSecurityLoginsLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSecurityLoginsLog">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetSingleSecurityLoginsLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSecurityLoginsLog">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/RemoveSecurityLoginsLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecurityLoginsLog">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/UpdateSecurityLoginsLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSecurityLoginsRole">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/AddSecurityLoginsRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSecurityLoginsRole">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetAllSecurityLoginsRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSecurityLoginsRole">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetSingleSecurityLoginsRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSecurityLoginsRole">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/RemoveSecurityLoginsRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecurityLoginsRole">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/UpdateSecurityLoginsRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSecurityRole">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/AddSecurityRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSecurityRole">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetAllSecurityRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSecurityRole">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/GetSingleSecurityRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSecurityRole">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/RemoveSecurityRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecurityRole">
+      <soap:operation soapAction="http://tempuri.org/ISecurity/UpdateSecurityRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Security">
+    <wsdl:port name="BasicHttpBinding_ISecurity" binding="tns:BasicHttpBinding_ISecurity">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/CareerCloud.WCF/Security/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -12,14 +12,21 @@ namespace CareerCloud.Pocos
     public class ApplicantWorkHistoryPoco : IPoco
     {
         [Key]
+        [Required]
         [Column("Id")]
-        public Guid Id { get; set; } 
+        public Guid Id { get; set; }
         [Column("Applicant")]
+        [Required]
         public Guid Applicant { get; set; }
+        [ForeignKey("Applicant")]
+        public virtual ApplicantProfilePoco ApplicantProfilePoco { get; set; }
         [Column("Company_Name")]
         public String CompanyName { get; set; }
         [Column("Country_Code")]
-        public String CountryCode { get; set; } 
+        [Required]
+        public String CountryCode { get; set; }
+        [ForeignKey("CountryCode")]
+        public virtual SystemCountryCodePoco SystemCountryCodePoco { get; set; }
         [Column("Location")]
         public String Location { get; set; } 
         [Column("Job_Title")]
@@ -35,6 +42,8 @@ namespace CareerCloud.Pocos
         [Column("End_Year")]
         public Int32 EndYear { get; set; } 
         [Column("Time_Stamp")]
-        public Byte[] TimeStamp { get; private set; } 
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public Byte[] TimeStamp { get; set; }
+        
     }
 }

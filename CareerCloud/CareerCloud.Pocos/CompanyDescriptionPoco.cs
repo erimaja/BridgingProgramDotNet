@@ -15,14 +15,26 @@ namespace CareerCloud.Pocos
         [Column("Id")]
         public Guid Id { get; set; } 
         [Column("Company")]
-        public Guid Company { get; set; } 
+        public Guid Company { get; set; }
+
+        [ForeignKey("Company")]
+        public virtual CompanyProfilePoco CompanyProfilePoco { get; set; }
+
         [Column("LanguageID")]
-        public String LanguageId { get; set; } 
+        public String LanguageId { get; set; }
+
+        [ForeignKey("LanguageId")]
+        public virtual SystemLanguageCodePoco SystemLanguageCodePoco { get; set; }
+
         [Column("Company_Name")]
         public String CompanyName { get; set; } 
+
         [Column("Company_Description")]
-        public String CompanyDescription { get; set; } 
+        public String CompanyDescription { get; set; }
+        
         [Column("Time_Stamp")]
-        public Byte[] TimeStamp { get; private set; } 
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public Byte[] TimeStamp { get; set; }
+        
     }
 }

@@ -17,6 +17,7 @@ namespace CareerCloud.Pocos
         [Column("Role")]
         public String Role { get; set; } 
         [Column("Is_Inactive")]
-        public Boolean IsInactive { get; set; } 
+        public Boolean IsInactive { get; set; }
+        public virtual ICollection<SecurityLoginsRolePoco> SecurityLoginsRolePoco { get; set; }
     }
 }

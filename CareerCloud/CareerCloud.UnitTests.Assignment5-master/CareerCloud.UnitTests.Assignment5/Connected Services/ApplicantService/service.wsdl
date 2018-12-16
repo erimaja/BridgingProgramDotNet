@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Applicant" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/CareerCloud.Pocos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IApplicant_AddApplicantEducation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicantEducation" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_AddApplicantEducation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicantEducationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetAllApplicantEducation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllApplicantEducation" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetAllApplicantEducation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllApplicantEducationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetSingleApplicantEducation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleApplicantEducation" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetSingleApplicantEducation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleApplicantEducationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_RemoveApplicantEducation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveApplicantEducation" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_RemoveApplicantEducation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveApplicantEducationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_UpdateApplicantEducation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicantEducation" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_UpdateApplicantEducation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicantEducationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_AddApplicantJobApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicantJobApplication" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_AddApplicantJobApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicantJobApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetAllApplicantJobApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllApplicantJobApplication" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetAllApplicantJobApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllApplicantJobApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetSingleApplicantJobApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleApplicantJobApplication" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetSingleApplicantJobApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleApplicantJobApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_RemoveApplicantJobApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveApplicantJobApplication" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_RemoveApplicantJobApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveApplicantJobApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_UpdateApplicantJobApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicantJobApplication" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_UpdateApplicantJobApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicantJobApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_AddApplicantProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicantProfile" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_AddApplicantProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicantProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetAllApplicantProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllApplicantProfile" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetAllApplicantProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllApplicantProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetSingleApplicantProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleApplicantProfile" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetSingleApplicantProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleApplicantProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_RemoveApplicantProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveApplicantProfile" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_RemoveApplicantProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveApplicantProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_UpdateApplicantProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicantProfile" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_UpdateApplicantProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicantProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_AddApplicantResume_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicantResume" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_AddApplicantResume_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicantResumeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetAllApplicantResume_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllApplicantResume" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetAllApplicantResume_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllApplicantResumeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetSingleApplicantResume_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleApplicantResume" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetSingleApplicantResume_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleApplicantResumeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_RemoveApplicantResume_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveApplicantResume" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_RemoveApplicantResume_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveApplicantResumeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_UpdateApplicantResume_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicantResume" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_UpdateApplicantResume_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicantResumeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_AddApplicantSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicantSkill" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_AddApplicantSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicantSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetAllApplicantSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllApplicantSkill" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetAllApplicantSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllApplicantSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetSingleApplicantSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleApplicantSkill" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetSingleApplicantSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleApplicantSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_RemoveApplicantSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveApplicantSkill" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_RemoveApplicantSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveApplicantSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_UpdateApplicantSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicantSkill" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_UpdateApplicantSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicantSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_AddApplicantWorkHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicantWorkHistory" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_AddApplicantWorkHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicantWorkHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetAllApplicantWorkHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllApplicantWorkHistory" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetAllApplicantWorkHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllApplicantWorkHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetSingleApplicantWorkHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleApplicantWorkHistory" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_GetSingleApplicantWorkHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleApplicantWorkHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_RemoveApplicantWorkHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveApplicantWorkHistory" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_RemoveApplicantWorkHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveApplicantWorkHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_UpdateApplicantWorkHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicantWorkHistory" />
+  </wsdl:message>
+  <wsdl:message name="IApplicant_UpdateApplicantWorkHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicantWorkHistoryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IApplicant">
+    <wsdl:operation name="AddApplicantEducation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/AddApplicantEducation" message="tns:IApplicant_AddApplicantEducation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/AddApplicantEducationResponse" message="tns:IApplicant_AddApplicantEducation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplicantEducation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/GetAllApplicantEducation" message="tns:IApplicant_GetAllApplicantEducation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/GetAllApplicantEducationResponse" message="tns:IApplicant_GetAllApplicantEducation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleApplicantEducation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/GetSingleApplicantEducation" message="tns:IApplicant_GetSingleApplicantEducation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/GetSingleApplicantEducationResponse" message="tns:IApplicant_GetSingleApplicantEducation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicantEducation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/RemoveApplicantEducation" message="tns:IApplicant_RemoveApplicantEducation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/RemoveApplicantEducationResponse" message="tns:IApplicant_RemoveApplicantEducation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantEducation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/UpdateApplicantEducation" message="tns:IApplicant_UpdateApplicantEducation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/UpdateApplicantEducationResponse" message="tns:IApplicant_UpdateApplicantEducation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicantJobApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/AddApplicantJobApplication" message="tns:IApplicant_AddApplicantJobApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/AddApplicantJobApplicationResponse" message="tns:IApplicant_AddApplicantJobApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplicantJobApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/GetAllApplicantJobApplication" message="tns:IApplicant_GetAllApplicantJobApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/GetAllApplicantJobApplicationResponse" message="tns:IApplicant_GetAllApplicantJobApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleApplicantJobApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/GetSingleApplicantJobApplication" message="tns:IApplicant_GetSingleApplicantJobApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/GetSingleApplicantJobApplicationResponse" message="tns:IApplicant_GetSingleApplicantJobApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicantJobApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/RemoveApplicantJobApplication" message="tns:IApplicant_RemoveApplicantJobApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/RemoveApplicantJobApplicationResponse" message="tns:IApplicant_RemoveApplicantJobApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantJobApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/UpdateApplicantJobApplication" message="tns:IApplicant_UpdateApplicantJobApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/UpdateApplicantJobApplicationResponse" message="tns:IApplicant_UpdateApplicantJobApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicantProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/AddApplicantProfile" message="tns:IApplicant_AddApplicantProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/AddApplicantProfileResponse" message="tns:IApplicant_AddApplicantProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplicantProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/GetAllApplicantProfile" message="tns:IApplicant_GetAllApplicantProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/GetAllApplicantProfileResponse" message="tns:IApplicant_GetAllApplicantProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleApplicantProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/GetSingleApplicantProfile" message="tns:IApplicant_GetSingleApplicantProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/GetSingleApplicantProfileResponse" message="tns:IApplicant_GetSingleApplicantProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicantProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/RemoveApplicantProfile" message="tns:IApplicant_RemoveApplicantProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/RemoveApplicantProfileResponse" message="tns:IApplicant_RemoveApplicantProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/UpdateApplicantProfile" message="tns:IApplicant_UpdateApplicantProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/UpdateApplicantProfileResponse" message="tns:IApplicant_UpdateApplicantProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicantResume">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/AddApplicantResume" message="tns:IApplicant_AddApplicantResume_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/AddApplicantResumeResponse" message="tns:IApplicant_AddApplicantResume_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplicantResume">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/GetAllApplicantResume" message="tns:IApplicant_GetAllApplicantResume_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/GetAllApplicantResumeResponse" message="tns:IApplicant_GetAllApplicantResume_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleApplicantResume">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/GetSingleApplicantResume" message="tns:IApplicant_GetSingleApplicantResume_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/GetSingleApplicantResumeResponse" message="tns:IApplicant_GetSingleApplicantResume_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicantResume">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/RemoveApplicantResume" message="tns:IApplicant_RemoveApplicantResume_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/RemoveApplicantResumeResponse" message="tns:IApplicant_RemoveApplicantResume_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantResume">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/UpdateApplicantResume" message="tns:IApplicant_UpdateApplicantResume_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/UpdateApplicantResumeResponse" message="tns:IApplicant_UpdateApplicantResume_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicantSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/AddApplicantSkill" message="tns:IApplicant_AddApplicantSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/AddApplicantSkillResponse" message="tns:IApplicant_AddApplicantSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplicantSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/GetAllApplicantSkill" message="tns:IApplicant_GetAllApplicantSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/GetAllApplicantSkillResponse" message="tns:IApplicant_GetAllApplicantSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleApplicantSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/GetSingleApplicantSkill" message="tns:IApplicant_GetSingleApplicantSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/GetSingleApplicantSkillResponse" message="tns:IApplicant_GetSingleApplicantSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicantSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/RemoveApplicantSkill" message="tns:IApplicant_RemoveApplicantSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/RemoveApplicantSkillResponse" message="tns:IApplicant_RemoveApplicantSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/UpdateApplicantSkill" message="tns:IApplicant_UpdateApplicantSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/UpdateApplicantSkillResponse" message="tns:IApplicant_UpdateApplicantSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicantWorkHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/AddApplicantWorkHistory" message="tns:IApplicant_AddApplicantWorkHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/AddApplicantWorkHistoryResponse" message="tns:IApplicant_AddApplicantWorkHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplicantWorkHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/GetAllApplicantWorkHistory" message="tns:IApplicant_GetAllApplicantWorkHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/GetAllApplicantWorkHistoryResponse" message="tns:IApplicant_GetAllApplicantWorkHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleApplicantWorkHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/GetSingleApplicantWorkHistory" message="tns:IApplicant_GetSingleApplicantWorkHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/GetSingleApplicantWorkHistoryResponse" message="tns:IApplicant_GetSingleApplicantWorkHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicantWorkHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/RemoveApplicantWorkHistory" message="tns:IApplicant_RemoveApplicantWorkHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/RemoveApplicantWorkHistoryResponse" message="tns:IApplicant_RemoveApplicantWorkHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantWorkHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicant/UpdateApplicantWorkHistory" message="tns:IApplicant_UpdateApplicantWorkHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicant/UpdateApplicantWorkHistoryResponse" message="tns:IApplicant_UpdateApplicantWorkHistory_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IApplicant" type="tns:IApplicant">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddApplicantEducation">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/AddApplicantEducation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplicantEducation">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/GetAllApplicantEducation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleApplicantEducation">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/GetSingleApplicantEducation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicantEducation">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/RemoveApplicantEducation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantEducation">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/UpdateApplicantEducation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicantJobApplication">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/AddApplicantJobApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplicantJobApplication">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/GetAllApplicantJobApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleApplicantJobApplication">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/GetSingleApplicantJobApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicantJobApplication">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/RemoveApplicantJobApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantJobApplication">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/UpdateApplicantJobApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicantProfile">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/AddApplicantProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplicantProfile">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/GetAllApplicantProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleApplicantProfile">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/GetSingleApplicantProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicantProfile">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/RemoveApplicantProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantProfile">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/UpdateApplicantProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicantResume">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/AddApplicantResume" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplicantResume">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/GetAllApplicantResume" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleApplicantResume">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/GetSingleApplicantResume" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicantResume">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/RemoveApplicantResume" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantResume">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/UpdateApplicantResume" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicantSkill">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/AddApplicantSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplicantSkill">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/GetAllApplicantSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleApplicantSkill">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/GetSingleApplicantSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicantSkill">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/RemoveApplicantSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantSkill">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/UpdateApplicantSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApplicantWorkHistory">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/AddApplicantWorkHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplicantWorkHistory">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/GetAllApplicantWorkHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleApplicantWorkHistory">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/GetSingleApplicantWorkHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicantWorkHistory">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/RemoveApplicantWorkHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantWorkHistory">
+      <soap:operation soapAction="http://tempuri.org/IApplicant/UpdateApplicantWorkHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Applicant">
+    <wsdl:port name="BasicHttpBinding_IApplicant" binding="tns:BasicHttpBinding_IApplicant">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/CareerCloud.WCF/Applicant/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,685 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Company" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/CareerCloud.Pocos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICompany_AddCompanyDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyDescription" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_AddCompanyDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetAllCompanyDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanyDescription" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetAllCompanyDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanyDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetSingleCompanyDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyDescription" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetSingleCompanyDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_RemoveCompanyDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyDescription" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_RemoveCompanyDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_UpdateCompanyDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyDescription" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_UpdateCompanyDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_AddCompanyJobDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyJobDescription" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_AddCompanyJobDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyJobDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetAllCompanyJobDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanyJobDescription" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetAllCompanyJobDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanyJobDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetSingleCompanyJobDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyJobDescription" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetSingleCompanyJobDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyJobDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_RemoveCompanyJobDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyJobDescription" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_RemoveCompanyJobDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyJobDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_UpdateCompanyJobDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyJobDescription" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_UpdateCompanyJobDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyJobDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_AddCompanyJobEducation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyJobEducation" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_AddCompanyJobEducation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyJobEducationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetAllCompanyJobEducation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanyJobEducation" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetAllCompanyJobEducation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanyJobEducationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetSingleCompanyJobEducation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyJobEducation" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetSingleCompanyJobEducation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyJobEducationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_RemoveCompanyJobEducation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyJobEducation" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_RemoveCompanyJobEducation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyJobEducationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_UpdateCompanyJobEducation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyJobEducation" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_UpdateCompanyJobEducation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyJobEducationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_AddCompanyJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyJob" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_AddCompanyJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetAllCompanyJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanyJob" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetAllCompanyJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanyJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetSingleCompanyJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyJob" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetSingleCompanyJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_RemoveCompanyJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyJob" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_RemoveCompanyJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_UpdateCompanyJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyJob" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_UpdateCompanyJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_AddCompanyJobSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyJobSkill" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_AddCompanyJobSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyJobSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetAllCompanyJobSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanyJobSkill" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetAllCompanyJobSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanyJobSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetSingleCompanyJobSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyJobSkill" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetSingleCompanyJobSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyJobSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_RemoveCompanyJobSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyJobSkill" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_RemoveCompanyJobSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyJobSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_UpdateCompanyJobSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyJobSkill" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_UpdateCompanyJobSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyJobSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_AddCompanyLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyLocation" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_AddCompanyLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetAllCompanyLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanyLocation" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetAllCompanyLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanyLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetSingleCompanyLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyLocation" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetSingleCompanyLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_RemoveCompanyLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyLocation" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_RemoveCompanyLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_UpdateCompanyLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyLocation" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_UpdateCompanyLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_AddCompanyProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyProfile" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_AddCompanyProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetAllCompanyProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanyProfile" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetAllCompanyProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanyProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetSingleCompanyProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyProfile" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_GetSingleCompanyProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_RemoveCompanyProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyProfile" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_RemoveCompanyProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_UpdateCompanyProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyProfile" />
+  </wsdl:message>
+  <wsdl:message name="ICompany_UpdateCompanyProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyProfileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICompany">
+    <wsdl:operation name="AddCompanyDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/AddCompanyDescription" message="tns:ICompany_AddCompanyDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/AddCompanyDescriptionResponse" message="tns:ICompany_AddCompanyDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanyDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/GetAllCompanyDescription" message="tns:ICompany_GetAllCompanyDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/GetAllCompanyDescriptionResponse" message="tns:ICompany_GetAllCompanyDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/GetSingleCompanyDescription" message="tns:ICompany_GetSingleCompanyDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/GetSingleCompanyDescriptionResponse" message="tns:ICompany_GetSingleCompanyDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompanyDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/RemoveCompanyDescription" message="tns:ICompany_RemoveCompanyDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/RemoveCompanyDescriptionResponse" message="tns:ICompany_RemoveCompanyDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/UpdateCompanyDescription" message="tns:ICompany_UpdateCompanyDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/UpdateCompanyDescriptionResponse" message="tns:ICompany_UpdateCompanyDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCompanyJobDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/AddCompanyJobDescription" message="tns:ICompany_AddCompanyJobDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/AddCompanyJobDescriptionResponse" message="tns:ICompany_AddCompanyJobDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanyJobDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/GetAllCompanyJobDescription" message="tns:ICompany_GetAllCompanyJobDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/GetAllCompanyJobDescriptionResponse" message="tns:ICompany_GetAllCompanyJobDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyJobDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/GetSingleCompanyJobDescription" message="tns:ICompany_GetSingleCompanyJobDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/GetSingleCompanyJobDescriptionResponse" message="tns:ICompany_GetSingleCompanyJobDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompanyJobDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/RemoveCompanyJobDescription" message="tns:ICompany_RemoveCompanyJobDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/RemoveCompanyJobDescriptionResponse" message="tns:ICompany_RemoveCompanyJobDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyJobDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/UpdateCompanyJobDescription" message="tns:ICompany_UpdateCompanyJobDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/UpdateCompanyJobDescriptionResponse" message="tns:ICompany_UpdateCompanyJobDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCompanyJobEducation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/AddCompanyJobEducation" message="tns:ICompany_AddCompanyJobEducation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/AddCompanyJobEducationResponse" message="tns:ICompany_AddCompanyJobEducation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanyJobEducation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/GetAllCompanyJobEducation" message="tns:ICompany_GetAllCompanyJobEducation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/GetAllCompanyJobEducationResponse" message="tns:ICompany_GetAllCompanyJobEducation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyJobEducation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/GetSingleCompanyJobEducation" message="tns:ICompany_GetSingleCompanyJobEducation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/GetSingleCompanyJobEducationResponse" message="tns:ICompany_GetSingleCompanyJobEducation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompanyJobEducation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/RemoveCompanyJobEducation" message="tns:ICompany_RemoveCompanyJobEducation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/RemoveCompanyJobEducationResponse" message="tns:ICompany_RemoveCompanyJobEducation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyJobEducation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/UpdateCompanyJobEducation" message="tns:ICompany_UpdateCompanyJobEducation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/UpdateCompanyJobEducationResponse" message="tns:ICompany_UpdateCompanyJobEducation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCompanyJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/AddCompanyJob" message="tns:ICompany_AddCompanyJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/AddCompanyJobResponse" message="tns:ICompany_AddCompanyJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanyJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/GetAllCompanyJob" message="tns:ICompany_GetAllCompanyJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/GetAllCompanyJobResponse" message="tns:ICompany_GetAllCompanyJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/GetSingleCompanyJob" message="tns:ICompany_GetSingleCompanyJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/GetSingleCompanyJobResponse" message="tns:ICompany_GetSingleCompanyJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompanyJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/RemoveCompanyJob" message="tns:ICompany_RemoveCompanyJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/RemoveCompanyJobResponse" message="tns:ICompany_RemoveCompanyJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/UpdateCompanyJob" message="tns:ICompany_UpdateCompanyJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/UpdateCompanyJobResponse" message="tns:ICompany_UpdateCompanyJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCompanyJobSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/AddCompanyJobSkill" message="tns:ICompany_AddCompanyJobSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/AddCompanyJobSkillResponse" message="tns:ICompany_AddCompanyJobSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanyJobSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/GetAllCompanyJobSkill" message="tns:ICompany_GetAllCompanyJobSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/GetAllCompanyJobSkillResponse" message="tns:ICompany_GetAllCompanyJobSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyJobSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/GetSingleCompanyJobSkill" message="tns:ICompany_GetSingleCompanyJobSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/GetSingleCompanyJobSkillResponse" message="tns:ICompany_GetSingleCompanyJobSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompanyJobSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/RemoveCompanyJobSkill" message="tns:ICompany_RemoveCompanyJobSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/RemoveCompanyJobSkillResponse" message="tns:ICompany_RemoveCompanyJobSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyJobSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/UpdateCompanyJobSkill" message="tns:ICompany_UpdateCompanyJobSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/UpdateCompanyJobSkillResponse" message="tns:ICompany_UpdateCompanyJobSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCompanyLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/AddCompanyLocation" message="tns:ICompany_AddCompanyLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/AddCompanyLocationResponse" message="tns:ICompany_AddCompanyLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanyLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/GetAllCompanyLocation" message="tns:ICompany_GetAllCompanyLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/GetAllCompanyLocationResponse" message="tns:ICompany_GetAllCompanyLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/GetSingleCompanyLocation" message="tns:ICompany_GetSingleCompanyLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/GetSingleCompanyLocationResponse" message="tns:ICompany_GetSingleCompanyLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompanyLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/RemoveCompanyLocation" message="tns:ICompany_RemoveCompanyLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/RemoveCompanyLocationResponse" message="tns:ICompany_RemoveCompanyLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/UpdateCompanyLocation" message="tns:ICompany_UpdateCompanyLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/UpdateCompanyLocationResponse" message="tns:ICompany_UpdateCompanyLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCompanyProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/AddCompanyProfile" message="tns:ICompany_AddCompanyProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/AddCompanyProfileResponse" message="tns:ICompany_AddCompanyProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanyProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/GetAllCompanyProfile" message="tns:ICompany_GetAllCompanyProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/GetAllCompanyProfileResponse" message="tns:ICompany_GetAllCompanyProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/GetSingleCompanyProfile" message="tns:ICompany_GetSingleCompanyProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/GetSingleCompanyProfileResponse" message="tns:ICompany_GetSingleCompanyProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompanyProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/RemoveCompanyProfile" message="tns:ICompany_RemoveCompanyProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/RemoveCompanyProfileResponse" message="tns:ICompany_RemoveCompanyProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompany/UpdateCompanyProfile" message="tns:ICompany_UpdateCompanyProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompany/UpdateCompanyProfileResponse" message="tns:ICompany_UpdateCompanyProfile_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICompany" type="tns:ICompany">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddCompanyDescription">
+      <soap:operation soapAction="http://tempuri.org/ICompany/AddCompanyDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanyDescription">
+      <soap:operation soapAction="http://tempuri.org/ICompany/GetAllCompanyDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyDescription">
+      <soap:operation soapAction="http://tempuri.org/ICompany/GetSingleCompanyDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompanyDescription">
+      <soap:operation soapAction="http://tempuri.org/ICompany/RemoveCompanyDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyDescription">
+      <soap:operation soapAction="http://tempuri.org/ICompany/UpdateCompanyDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCompanyJobDescription">
+      <soap:operation soapAction="http://tempuri.org/ICompany/AddCompanyJobDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanyJobDescription">
+      <soap:operation soapAction="http://tempuri.org/ICompany/GetAllCompanyJobDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyJobDescription">
+      <soap:operation soapAction="http://tempuri.org/ICompany/GetSingleCompanyJobDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompanyJobDescription">
+      <soap:operation soapAction="http://tempuri.org/ICompany/RemoveCompanyJobDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyJobDescription">
+      <soap:operation soapAction="http://tempuri.org/ICompany/UpdateCompanyJobDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCompanyJobEducation">
+      <soap:operation soapAction="http://tempuri.org/ICompany/AddCompanyJobEducation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanyJobEducation">
+      <soap:operation soapAction="http://tempuri.org/ICompany/GetAllCompanyJobEducation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyJobEducation">
+      <soap:operation soapAction="http://tempuri.org/ICompany/GetSingleCompanyJobEducation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompanyJobEducation">
+      <soap:operation soapAction="http://tempuri.org/ICompany/RemoveCompanyJobEducation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyJobEducation">
+      <soap:operation soapAction="http://tempuri.org/ICompany/UpdateCompanyJobEducation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCompanyJob">
+      <soap:operation soapAction="http://tempuri.org/ICompany/AddCompanyJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanyJob">
+      <soap:operation soapAction="http://tempuri.org/ICompany/GetAllCompanyJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyJob">
+      <soap:operation soapAction="http://tempuri.org/ICompany/GetSingleCompanyJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompanyJob">
+      <soap:operation soapAction="http://tempuri.org/ICompany/RemoveCompanyJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyJob">
+      <soap:operation soapAction="http://tempuri.org/ICompany/UpdateCompanyJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCompanyJobSkill">
+      <soap:operation soapAction="http://tempuri.org/ICompany/AddCompanyJobSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanyJobSkill">
+      <soap:operation soapAction="http://tempuri.org/ICompany/GetAllCompanyJobSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyJobSkill">
+      <soap:operation soapAction="http://tempuri.org/ICompany/GetSingleCompanyJobSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompanyJobSkill">
+      <soap:operation soapAction="http://tempuri.org/ICompany/RemoveCompanyJobSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyJobSkill">
+      <soap:operation soapAction="http://tempuri.org/ICompany/UpdateCompanyJobSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCompanyLocation">
+      <soap:operation soapAction="http://tempuri.org/ICompany/AddCompanyLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanyLocation">
+      <soap:operation soapAction="http://tempuri.org/ICompany/GetAllCompanyLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyLocation">
+      <soap:operation soapAction="http://tempuri.org/ICompany/GetSingleCompanyLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompanyLocation">
+      <soap:operation soapAction="http://tempuri.org/ICompany/RemoveCompanyLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyLocation">
+      <soap:operation soapAction="http://tempuri.org/ICompany/UpdateCompanyLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCompanyProfile">
+      <soap:operation soapAction="http://tempuri.org/ICompany/AddCompanyProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanyProfile">
+      <soap:operation soapAction="http://tempuri.org/ICompany/GetAllCompanyProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyProfile">
+      <soap:operation soapAction="http://tempuri.org/ICompany/GetSingleCompanyProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCompanyProfile">
+      <soap:operation soapAction="http://tempuri.org/ICompany/RemoveCompanyProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanyProfile">
+      <soap:operation soapAction="http://tempuri.org/ICompany/UpdateCompanyProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Company">
+    <wsdl:port name="BasicHttpBinding_ICompany" binding="tns:BasicHttpBinding_ICompany">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/CareerCloud.WCF/Company/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

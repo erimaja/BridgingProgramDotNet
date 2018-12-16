@@ -12,9 +12,12 @@ namespace CareerCloud.Pocos
     public class SystemCountryCodePoco
     {
         [Key]
+        [Required]
         [Column("Code")]
         public String Code { get; set; }
         [Column("Name")]
-        public String Name { get; set; } 
+        public String Name { get; set; }
+        public virtual ICollection<ApplicantProfilePoco> ApplicantProfilePoco { get; set; }
+        public virtual ICollection<ApplicantWorkHistoryPoco> ApplicantWorkHistoryPoco { get; set; }
     }
 }

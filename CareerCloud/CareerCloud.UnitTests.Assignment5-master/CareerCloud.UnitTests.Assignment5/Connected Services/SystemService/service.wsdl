@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="System" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/CareerCloud.Pocos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISystem_AddSystemCountryCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSystemCountryCode" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_AddSystemCountryCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSystemCountryCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_GetAllSystemCountryCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSystemCountryCode" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_GetAllSystemCountryCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSystemCountryCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_GetSingleSystemCountryCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleSystemCountryCode" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_GetSingleSystemCountryCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleSystemCountryCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_RemoveSystemCountryCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSystemCountryCode" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_RemoveSystemCountryCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSystemCountryCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_UpdateSystemCountryCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSystemCountryCode" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_UpdateSystemCountryCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSystemCountryCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_AddSystemLanguageCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSystemLanguageCode" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_AddSystemLanguageCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSystemLanguageCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_GetAllSystemLanguageCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSystemLanguageCode" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_GetAllSystemLanguageCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSystemLanguageCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_GetSingleSystemLanguageCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleSystemLanguageCode" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_GetSingleSystemLanguageCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleSystemLanguageCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_RemoveSystemLanguageCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSystemLanguageCode" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_RemoveSystemLanguageCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSystemLanguageCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_UpdateSystemLanguageCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSystemLanguageCode" />
+  </wsdl:message>
+  <wsdl:message name="ISystem_UpdateSystemLanguageCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSystemLanguageCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISystem">
+    <wsdl:operation name="AddSystemCountryCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISystem/AddSystemCountryCode" message="tns:ISystem_AddSystemCountryCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISystem/AddSystemCountryCodeResponse" message="tns:ISystem_AddSystemCountryCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSystemCountryCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISystem/GetAllSystemCountryCode" message="tns:ISystem_GetAllSystemCountryCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISystem/GetAllSystemCountryCodeResponse" message="tns:ISystem_GetAllSystemCountryCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSystemCountryCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISystem/GetSingleSystemCountryCode" message="tns:ISystem_GetSingleSystemCountryCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISystem/GetSingleSystemCountryCodeResponse" message="tns:ISystem_GetSingleSystemCountryCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSystemCountryCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISystem/RemoveSystemCountryCode" message="tns:ISystem_RemoveSystemCountryCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISystem/RemoveSystemCountryCodeResponse" message="tns:ISystem_RemoveSystemCountryCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSystemCountryCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISystem/UpdateSystemCountryCode" message="tns:ISystem_UpdateSystemCountryCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISystem/UpdateSystemCountryCodeResponse" message="tns:ISystem_UpdateSystemCountryCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSystemLanguageCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISystem/AddSystemLanguageCode" message="tns:ISystem_AddSystemLanguageCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISystem/AddSystemLanguageCodeResponse" message="tns:ISystem_AddSystemLanguageCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSystemLanguageCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISystem/GetAllSystemLanguageCode" message="tns:ISystem_GetAllSystemLanguageCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISystem/GetAllSystemLanguageCodeResponse" message="tns:ISystem_GetAllSystemLanguageCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSystemLanguageCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISystem/GetSingleSystemLanguageCode" message="tns:ISystem_GetSingleSystemLanguageCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISystem/GetSingleSystemLanguageCodeResponse" message="tns:ISystem_GetSingleSystemLanguageCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSystemLanguageCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISystem/RemoveSystemLanguageCode" message="tns:ISystem_RemoveSystemLanguageCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISystem/RemoveSystemLanguageCodeResponse" message="tns:ISystem_RemoveSystemLanguageCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSystemLanguageCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISystem/UpdateSystemLanguageCode" message="tns:ISystem_UpdateSystemLanguageCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISystem/UpdateSystemLanguageCodeResponse" message="tns:ISystem_UpdateSystemLanguageCode_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISystem" type="tns:ISystem">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddSystemCountryCode">
+      <soap:operation soapAction="http://tempuri.org/ISystem/AddSystemCountryCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSystemCountryCode">
+      <soap:operation soapAction="http://tempuri.org/ISystem/GetAllSystemCountryCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSystemCountryCode">
+      <soap:operation soapAction="http://tempuri.org/ISystem/GetSingleSystemCountryCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSystemCountryCode">
+      <soap:operation soapAction="http://tempuri.org/ISystem/RemoveSystemCountryCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSystemCountryCode">
+      <soap:operation soapAction="http://tempuri.org/ISystem/UpdateSystemCountryCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSystemLanguageCode">
+      <soap:operation soapAction="http://tempuri.org/ISystem/AddSystemLanguageCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSystemLanguageCode">
+      <soap:operation soapAction="http://tempuri.org/ISystem/GetAllSystemLanguageCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleSystemLanguageCode">
+      <soap:operation soapAction="http://tempuri.org/ISystem/GetSingleSystemLanguageCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSystemLanguageCode">
+      <soap:operation soapAction="http://tempuri.org/ISystem/RemoveSystemLanguageCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSystemLanguageCode">
+      <soap:operation soapAction="http://tempuri.org/ISystem/UpdateSystemLanguageCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="System">
+    <wsdl:port name="BasicHttpBinding_ISystem" binding="tns:BasicHttpBinding_ISystem">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/CareerCloud.WCF/System" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
